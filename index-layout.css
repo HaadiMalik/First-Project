@@ -1,0 +1,258 @@
+/*
+ * Haadi Malik
+ * file: index-layout.css
+ * for: index.html
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');          /* Album Names */
+
+/* -------- MAJOR SECTION(S) -------- */
+/* general-layout.css */
+
+
+/* !!MINDTAP ELEMENTS!! --CSS HOMEPAGE-- */
+/* -------- NAVIGATION -------- */
+/* general-layout.css */
+
+
+/* !!MINDTAP ELEMENTS!! --CSS HOMEPAGE-- */
+/* -------- GENERAL IMAGES -------- */
+/* general-layout.css */
+
+
+/* Specific image resizing */
+#lp-logo {
+    max-width: 30%;
+}
+
+#lp-members {
+    max-width: 60%;
+}
+
+/* Figures */
+
+figure {
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: auto;
+}
+  
+figcaption {
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+
+/* -------- "MEMBERS" CSS -------- */
+
+/* Table */
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* -------- "IMPACT" CSS -------- */
+
+#influenced {
+    margin-left: 4em;
+}
+
+
+/* -------- "ALBUMS" CSS -------- */
+
+#albums {
+    margin-top: 20px;
+    overflow: auto;
+}
+
+#album-nav {
+    font-size: 90%;
+    margin-bottom: 20px;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Singular album item (Image, Title, and Text) */
+.album-item {
+    width: 95%;
+    margin: 1%;
+    clear: both;
+    margin: 0 auto;
+}
+
+/* Name of the albums */
+.album-title {
+    font-size: 30px;
+    font-family: 'Anta';
+    letter-spacing: 2px;
+}
+
+/* Albums on the left */
+.album-left {
+    text-align: left;
+}
+
+/* Direct children of the class */
+.album-left > img {
+    max-width: 220px;
+    float: left;
+    margin: 40px;
+}
+
+/* Albums on the right */
+.album-right {
+    text-align: right;
+}
+
+/* Direct children of the class */
+.album-right > img {
+    max-width: 220px;
+    float: right;
+    margin: 40px;
+}
+
+.album-text {
+    width: 85%;
+    line-height: 170%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* -------- THE MODAL -------- */
+
+/* !!MINDTAP ELEMENTS!! --LAYOUT-- */
+/* The Modal Background */
+.album-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* !!MINDTAP ELEMENTS!! --LAYOUT-- */
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-content > ul {
+    list-style-type: "- ";
+}
+
+.modal-content > ul > li {
+    margin: 5px;
+    margin-top: 7px;
+}
+
+/* The Close (X) Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+/* -------- VALIDATOR IMAGES -------- */
+
+img.validator {
+    height: 31px;
+    width: 88px;
+    display: inline-block;
+    border: none;
+    border-radius: 0%;
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+/* Media query for tablets in landscape mode (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {    
+    
+    #album-nav {
+        display: flex;
+        justify-content: space-between; /* Evenly distribute items along the main axis */
+        margin-bottom: 20px;
+    }
+    
+    #lp-logo {
+        max-width: 70%; /* Adjust the size of lp-logo on smaller screens */
+    }
+
+    #lp-members {
+        max-width: 90%; /* Adjust the size of lp-members on smaller screens */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .album-left > img,
+    .album-right > img {
+        max-width: 50%;
+        float: none;
+        margin: 20px auto;
+    }
+
+    .album-title {
+        text-align: center;
+    }
+    
+    .album-text {
+        text-align: justify;
+    }
+}
+
+/* Media query for mobile devices (min-width: 320px) and (max-width: 480px) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #lp-logo {
+        max-width: 70%;
+    }
+
+    #lp-members {
+        max-width: 90%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+
+    .album-title {
+        text-align: center; /* Center-align album titles */
+    }
+}
+

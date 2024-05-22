@@ -1,0 +1,73 @@
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.project-info {
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    min-width: 30%;
+}
+
+.project-details {
+    padding: 10px;
+    margin: 10px auto;
+    text-align: left;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    min-width: 30%;
+}
+
+.project-img {
+    width: 30%;
+}
+
+.project-description {
+    text-align: left;
+    margin: 10px auto;
+    padding: 10px;
+    width: 60%;
+    background-color: red;
+}
+
+.project-tracks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid black;
+    width: 90%;
+    min-width: 30%;
+}
+
+.tracks-column {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px solid darkgreen;
+}
+
+/* Clear floats after the columns */
+.project-tracks:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}

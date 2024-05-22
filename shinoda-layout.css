@@ -1,0 +1,93 @@
+/*
+ * Haadi Malik
+ * file: shinoda-layout.css
+ * for: shinoda.html
+*/
+
+:root {
+    --max-accordian-height: 320px;
+}
+
+/* -------- MAJOR SECTION(S) -------- */
+/* general-layout.css */
+
+
+/* !!MINDTAP ELEMENTS!! --CSS HOMEPAGE-- */
+/* -------- NAVIGATION -------- */
+/* general-layout.css */
+
+
+/* !!MINDTAP ELEMENTS!! --CSS HOMEPAGE-- */
+/* -------- GENERAL IMAGES -------- */
+/* general-layout.css */
+
+
+/* -------- "OVERVIEW" -------- */
+
+#shinoda-intro {
+    margin-top: 10px;
+    max-width: 15%;
+}
+
+
+/* -------- "WITHIN LINKIN PARK" -------- */
+
+
+
+/* -------- "AFTER LINKIN PARK" -------- */
+
+#bennington-and-shinoda {
+    width: 20%;
+}
+
+
+/* -------- "OTHER WORK" -------- */
+
+
+
+/* -------- "OTHER WORK" ACCORDIAN -------- */
+
+.accordion-header {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.accordion-item:nth-of-type(odd) .accordion-header {
+    background-color: rgb(230, 230, 230);
+}
+
+.accordion-item:nth-of-type(even) .accordion-header {
+    background-color: rgb(250, 250, 250);
+}
+
+.accordion-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.3, 0.5, 0.7, 0.9), opacity 0.2s;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: var(--max-accordian-height); /* Adjust height as needed */
+    opacity: 1;
+}
+
+/* -------- "OTHER WORK" ACCORDIAN END -------- */
+
+.album-cover {
+    margin: 20px;
+    margin-right: 40px;
+    width: 18%;
+    float: left;
+}
+
+.accordion-content > ul {
+    margin-top: 0;
+    column-count: 2;
+    column-fill: auto;
+    max-height: calc(var(--max-accordian-height) - 40px);
+}
+
+.accordion-content > ul > li {
+    margin-bottom: 5px;
+}
